@@ -14,7 +14,7 @@ vi /etc/init.d/nginx
 NGINXPATH=${NGINXPATH:-/usr/local/openresty/nginx}
 保存，退出即可...
 
-4. 使用方法:
+4.使用方法:
 service nginx start
 service nginx stop
 service nginx restart
