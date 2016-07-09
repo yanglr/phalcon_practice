@@ -5,6 +5,8 @@ Original disigned by Stephan Miller, modified by Bravo Yeung (http://blog.csdn.n
 ***使用Phalcon框架开发一个简易的博客系统***
 ------
 
+镜像博文: http://blog.csdn.net/lzuacm/article/details/51869038
+
 step1: 在nginx对应的Web目录下创建文件夹blog(比如: ```/home/www/server/blog```)，然后```git clone git@github.com:yanglr/phalcon_practice.git``` 后，将```./phalcon_practice/blog```中的内容复制到文件夹```/home/www/server/blog```中；
 
 step 2: 在nginx配置目录下的conf/vhost中配置多模块路由设置，在该目录下创建文件dev.blog.io.conf文件，其内容如下：
