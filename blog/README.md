@@ -1,3 +1,7 @@
+A simple blog using the Phalcon PHP Framework.
+Original disigned by Stephan Miller, modified by Bravo Yeung (http://blog.csdn.net/lzuacm).
+
+------
 使用Phalcon框架开发一个简易的博客系统
 
 step1: 在nginx对应的Web目录下创建文件夹blog(比如: ```/home/www/server/blog```)，然后```git clone git@github.com:yanglr/phalcon_practice.git``` 后，将```./phalcon_practice/blog```中的内容复制到文件夹```/home/www/server/blog```中；
