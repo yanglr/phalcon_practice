@@ -10,7 +10,7 @@ step 2: 在nginx配置目录下的conf/vhost中配置多模块路由设置，在
 
 step 3: 修改app/config/config.php文件中的Mysql的相关信息，根据具体的情况进行修改；
 
-step 4: 将app/sql文件夹中的sql文件phalconblog-data.sql导入到mysql中，可以直接在mysql中导入，也可以用navicat进行导入...
+step 4:  在mysql中创建数据库phalconblog，然后将app/sql文件夹中的sql文件phalconblog-data.sql导入到mysql中，可以直接在mysql中导入，也可以用navicat进行导入...
 
 step 5: 修改/etc/hosts文件，添加语句:
 
