@@ -15,8 +15,9 @@ step 4: 将app/sql文件夹中的sql文件phalconblog-data.sql导入到mysql中�
 step 5: 修改/etc/hosts文件，添加语句:
 
 ``` 
-☐☐☐☐	dev.blog.io
+☐.☐.☐.☐	dev.blog.io
 ```
+这里☐.☐.☐.☐是你在Linux下使用ifconfig命令看到的ip地址
 
 step 6: 用浏览器访问 http://dev.blog.io 即可。
 
