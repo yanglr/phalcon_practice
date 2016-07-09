@@ -27,4 +27,4 @@ step 6: 用浏览器访问 http://dev.blog.io 即可。
 
 账号: admin  密码: admin
 
-账号: test  密码: test```
+账号: test  密码: test
