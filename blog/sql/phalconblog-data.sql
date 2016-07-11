@@ -3,14 +3,14 @@ Navicat MySQL Data Transfer
 
 Source Server         : ubuntu14.04
 Source Server Version : 50549
-Source Host           : 192.168.20.129:3306
+Source Host           : 192.168.199.130:3306
 Source Database       : phalconblog
 
 Target Server Type    : MYSQL
 Target Server Version : 50549
 File Encoding         : 65001
 
-Date: 2016-07-09 18:25:10
+Date: 2016-07-11 14:28:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,8 +30,7 @@ CREATE TABLE `comments` (
   `publish` tinyint(1) NOT NULL,
   `posts_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_comments_posts1` (`posts_id`),
-  CONSTRAINT `fk_comments_posts1` FOREIGN KEY (`posts_id`) REFERENCES `posts` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_comments_posts1` (`posts_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -49,9 +48,7 @@ CREATE TABLE `post_tags` (
   `tags_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_post_tags_tags1` (`tags_id`),
-  KEY `fk_post_tags_posts1` (`posts_id`),
-  CONSTRAINT `fk_post_tags_posts1` FOREIGN KEY (`posts_id`) REFERENCES `posts` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_post_tags_tags1` FOREIGN KEY (`tags_id`) REFERENCES `tags` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_post_tags_posts1` (`posts_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -76,14 +73,12 @@ CREATE TABLE `posts` (
   `pinged` text,
   `to_ping` text,
   PRIMARY KEY (`id`),
-  KEY `fk_posts_users` (`users_id`),
-  CONSTRAINT `fk_posts_users` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk_posts_users` (`users_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of posts
 -- ----------------------------
-INSERT INTO `posts` VALUES ('14', '1', 'ç¬¬ä¸€ç¯‡ æ—¥å¿—', 'To be or not to be', 'English', '2016-07-09 13:54:51', '2016-07-09 17:43:25', null, null);
 INSERT INTO `posts` VALUES ('15', '2', '2nd post', 'I like to write some stories here.', 'Writing', '2016-07-09 14:11:07', null, null, null);
 INSERT INTO `posts` VALUES ('16', '2', 'post1 - user test', 'Phalcon, get started.', 'PHP', '2016-07-09 17:40:59', null, null, null);
 
@@ -122,5 +117,5 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', 'admin', '$2a$08$RIrVZunHumUWaSIA0bxkmer5eirVKrEKDYkToHVLFdLcYdzhnLxNG', 'Jack', 'admin@gmail.com');
+INSERT INTO `users` VALUES ('1', 'admin', '$2a$08$OH9zQizv3srTKRxQd788FuJt0I6e8iXKzRUkdrsG9RKBTJKNaViqe', 'Jack', 'admin@gmail.com');
 INSERT INTO `users` VALUES ('2', 'test', '$2a$08$dZMnMqyAav7dnmAzHCCyC.PGQy72scddTgxkTZol20Xti7zCDVH/K', 'Nick', 'test@gmail.com');
